@@ -3,8 +3,7 @@ title: "Meridian: Sparse Routing for Long-Context Retrieval"
 authors: "Shirley Gray, Dana Mercer, Priya Raghavan"
 venue: "EMNLP 2026"
 year: 2026
-$1
-code: "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-meridian-sparse-router-3984-k9m2"
+status: "Published"
 tags: ["retrieval", "mixture-of-experts"]
 ---
 

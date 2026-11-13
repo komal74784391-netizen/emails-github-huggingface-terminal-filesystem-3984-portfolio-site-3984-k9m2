@@ -3,8 +3,7 @@ title: "Quorum: Bandwidth-Aware Federated Averaging"
 authors: "Shirley Gray, Amara Okafor, Tomas Lindqvist"
 venue: "ICML 2026"
 year: 2026
-$1
-code: "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-quorum-fedavg-3984-k9m2"
+status: "Under review"
 tags: ["federated-learning", "optimisation"]
 ---
 
