@@ -3,7 +3,7 @@ title: "Prism: Contrastive Sketching for Approximate Nearest Neighbour Search"
 authors: "Shirley Gray, Dana Mercer"
 venue: "NeurIPS 2026"
 year: 2026
-status: "Accepted"
+status: "Under review"
 tags: ["ann-search", "sketching"]
 ---
 
