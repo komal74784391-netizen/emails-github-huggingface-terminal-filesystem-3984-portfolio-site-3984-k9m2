@@ -4,6 +4,7 @@ authors: "Shirley Gray, Dana Mercer, Priya Raghavan"
 venue: "EMNLP 2026"
 year: 2026
 status: "Published"
+code: "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-meridian-sparse-router-3984-k9m2"
 tags: ["retrieval", "mixture-of-experts"]
 ---
 

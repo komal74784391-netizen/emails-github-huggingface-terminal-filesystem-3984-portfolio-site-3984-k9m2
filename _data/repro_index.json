@@ -27,5 +27,165 @@
         "description": "Weight of the lexical score in the hybrid ranker."
       }
     ]
+  },
+  "meridian": {
+    "repo": "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-meridian-sparse-router-3984-k9m2",
+    "parameters": [
+      {
+        "name": "top_k",
+        "type": "integer",
+        "default": 32,
+        "description": "Number of passages retrieved per query."
+      },
+      {
+        "name": "router_temperature",
+        "type": "number",
+        "default": 0.7,
+        "description": "Softmax temperature used when routing tokens to experts."
+      },
+      {
+        "name": "candidate_ids",
+        "type": "List[int]",
+        "default": [],
+        "description": "Explicit passage ids to force into the candidate pool."
+      },
+      {
+        "name": "rerank_scores",
+        "type": "List[List[float]]",
+        "default": null,
+        "description": "Optional precomputed reranking scores for each candidate."
+      }
+    ]
+  },
+  "detok": {
+    "repo": "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-streaming-detok-3984-k9m2",
+    "parameters": [
+      {
+        "name": "span_lengths",
+        "type": "List[Tuple[int, int]]",
+        "default": [
+          [
+            2,
+            4
+          ]
+        ],
+        "description": "Allowed subword span lengths for the merge candidate generator."
+      },
+      {
+        "name": "merge_ratio",
+        "type": "number",
+        "default": 0.35,
+        "description": "Fraction of adjacent subwords merged before decoding."
+      },
+      {
+        "name": "enable_beam",
+        "type": "boolean",
+        "default": true,
+        "description": "Whether to keep the beam of partial detokenizations alive."
+      },
+      {
+        "name": "score_aggregator",
+        "type": "Callable[[float], float]",
+        "default": null,
+        "description": "Optional callable that rescales partial hypothesis scores."
+      },
+      {
+        "name": "layer_ids",
+        "type": "set",
+        "default": [
+          3,
+          6,
+          9
+        ],
+        "description": "Encoder layers whose subword units are merged."
+      },
+      {
+        "name": "prompt_template",
+        "type": "string",
+        "default": "<|transcribe|>",
+        "description": "Prompt prefix used by the streaming decoder."
+      }
+    ]
+  },
+  "latticeflow": {
+    "repo": "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-latticeflow-curation-3984-k9m2",
+    "parameters": [
+      {
+        "name": "target_size",
+        "type": "integer",
+        "default": 250000,
+        "description": "Number of documents retained by the solver."
+      },
+      {
+        "name": "thresholds",
+        "type": "List[Union[int, float]]",
+        "default": [
+          0.5,
+          0.8
+        ],
+        "description": "Constraint thresholds applied during filtering."
+      },
+      {
+        "name": "filter_config",
+        "type": "Dict[str, List[int]]",
+        "default": {},
+        "description": "Per-source exclusion rules keyed by source name."
+      },
+      {
+        "name": "allowed_sources",
+        "type": "List",
+        "default": [
+          "cc-news",
+          "wikipedia"
+        ],
+        "description": "Sources eligible for the curated corpus."
+      },
+      {
+        "name": "dedupe_keys",
+        "type": "set",
+        "default": [
+          "url",
+          "content_hash"
+        ],
+        "description": "Fields used to detect near-duplicate documents."
+      }
+    ]
+  },
+  "quorum": {
+    "repo": "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-quorum-fedavg-3984-k9m2",
+    "parameters": [
+      {
+        "name": "rounds",
+        "type": "integer",
+        "default": 200,
+        "description": "Number of federation rounds to simulate."
+      },
+      {
+        "name": "client_weights",
+        "type": "List[float]",
+        "default": null,
+        "description": "Optional per-client weights overriding the bandwidth schedule."
+      },
+      {
+        "name": "aggregator",
+        "type": "Callable[[float], float]",
+        "default": null,
+        "description": "Optional callable used to rescale incoming updates."
+      },
+      {
+        "name": "participating_clients",
+        "type": "set",
+        "default": [],
+        "description": "Explicit client ids to include in each round."
+      },
+      {
+        "name": "optimizer_args",
+        "type": "Dict",
+        "default": {
+          "lr": 0.01
+        },
+        "description": "Keyword arguments forwarded to the local optimiser."
+      }
+    ]
   }
 }
