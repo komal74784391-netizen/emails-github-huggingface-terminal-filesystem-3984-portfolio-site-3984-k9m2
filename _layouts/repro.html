@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>Reproducibility index</h1>
+{% for project in site.data.repro_index %}
+<section>
+  <h2>{{ project[0] }}</h2>
+  <p><a href="{{ project[1].repo }}">{{ project[1].repo }}</a></p>
+  <table>
+    <tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr>
+    {% for p in project[1].parameters %}
+    <tr><td>{{ p.name }}</td><td><code>{{ p.type }}</code></td><td>{{ p.default }}</td><td>{{ p.description }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+{% endfor %}

@@ -1,0 +1,31 @@
+{
+  "harbor": {
+    "repo": "https://github.com/komal74784391-netizen/emails-github-huggingface-terminal-filesystem-3984-harbor-retrieval-toolkit-3984-k9m2",
+    "parameters": [
+      {
+        "name": "index_backend",
+        "type": "string",
+        "default": "bm25",
+        "description": "Backend used to build the retrieval index."
+      },
+      {
+        "name": "recall_k",
+        "type": "integer",
+        "default": 100,
+        "description": "Number of documents scored for each query."
+      },
+      {
+        "name": "query_terms",
+        "type": "List[str]",
+        "default": [],
+        "description": "Seed terms appended to every query."
+      },
+      {
+        "name": "alpha",
+        "type": "number",
+        "default": 0.6,
+        "description": "Weight of the lexical score in the hybrid ranker."
+      }
+    ]
+  }
+}
